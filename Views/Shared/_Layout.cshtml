@@ -15,19 +15,19 @@
     </div>
 
     <!-- Header Section Begin -->
-    @await Html.PartialAsync("HeaderPartial")
+    @await Html.PartialAsync("HeaderPartial")@RenderBody()
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-    @await Html.PartialAsync("HeroPartial")
+    @await Html.PartialAsync("HeroPartial")@RenderBody()
     <!-- Hero Section End -->
 
     <!-- Product Section Begin -->
-    @await Html.PartialAsync("ProductPartial")
+    @await Html.PartialAsync("ProductPartial")@RenderBody()
     <!-- Product Section End -->
 
     <!-- Footer Section Begin -->
-    @await Html.PartialAsync("FooterPartial")
+    @await Html.PartialAsync("FooterPartial")@RenderBody()
     <!-- Footer Section End -->
 
   <!-- Search model Begin -->
