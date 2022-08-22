@@ -1,9 +1,10 @@
-﻿@{
+﻿@using AnimeLib.Service
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div>
     <h1>
-        Работает
+        @Config.CompanyName <!--ВЫЗВАЛ ИЗ APPSETTINGS.JSON ЧЕРЕЗ CONFIG.CS-->
     </h1>
 </div>
