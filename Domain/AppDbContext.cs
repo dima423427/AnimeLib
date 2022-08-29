@@ -14,7 +14,51 @@ namespace AnimeLib.Domain
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<TextField>()
+            modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Id = "",
+                Name =  "",
+                NormalizedName = ""
+            });
+
+            modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
+            {
+                Id = "",
+                UserName = "",
+                NormalizedUserName = "",
+                Email = "",
+                NormalizedEmail = "",
+                EmailConfirmed = true,
+                PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "superpassword"),
+                SecurityStamp = string.Empty
+            });
+
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = "",
+                UserId = ""
+            });
+
+            modelBuilder.Entity<TextField>().HasData(new TextField
+            {
+                Id = new System.Guid(""),
+                CodeWord = "",
+                Title = ""
+            });
+
+            modelBuilder.Entity<TextField>().HasData(new TextField
+            {
+                Id = new System.Guid(""),
+                CodeWord = "",
+                Title = ""
+            });
+
+            modelBuilder.Entity<TextField>().HasData(new TextField
+            {
+                Id = new System.Guid(""),
+                CodeWord = "",
+                Title = ""
+            });
         }
     }
 }
